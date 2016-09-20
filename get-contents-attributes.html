@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+           //This will return the text of the selected element
+            $("#button_01").click(function (){
+                $("#output").text("You have set me the value");
+            });
+            //This will return the html of selceted element
+            $("#button_02").click(function(){
+                $("#output").html("<p> This is the first pgraph. </p> <p>This is the 2nd one </p>");
+            });
+            
+            //This will return the value of the selected element .
+            $("#button_03").click(function (){
+                $("#my_text_box").val("Thank u for the text");
+            });
+        });
+    </script>
+    </head>
+    
+    <body>
+    <input type="button" id="button_01" value="button 01">
+        <input type="button" id= "button_02" value = 'button 02'>
+        <input type ="button" id="button_03" value="button 03">
+    <p id="output"></p>
+    <input type="text" id="my_text_box">
+    </body>
+</html>

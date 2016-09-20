@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--     Initialize jscript during page load -->
+    <script type="text/javascript" src="jquery.js" ></script>
+    <script type="text/javascript">
+    //LOads the Jquery library //
+        $(document).ready(function(){
+            //Register event listners
+            $("#paragraph_01").click(function(){
+               hide_paragraph_with_specific_id(); 
+            });
+            $("#paragraph_02").click(function(){
+               hide_all_paragraphs(); 
+            });
+            $("#paragraph_03").click(function(){
+               hide_all_paragraps_by_class(); 
+            });
+        }); //ENd of ready function
+    
+    //This hides the paragraph with the id paragraph_01.//
+          function hide_paragraph_with_specific_id(){
+            $("#paragraph_01").hide();
+        } //End of hide_paragrpah_with_specific_id function
+        
+    //This hides all paragraph //
+        function hide_all_paragraphs(){
+            $("p").hide();
+        }//End of hide_all_paragraphs functions
+        
+        //This hides all th eparagraphs with by class name //
+        
+        function hide_all_paragraphs_by_class(){
+            $(".paragraph_class").hide();
+        } //End of hide_all_paragraphs function.
+    </script>
+    </head>
+<body>
+    <p id="paragraph_01" class="paragraph_class_01">This is paragraph 1</p>
+    <p id="paragraph_02" class = "paragraph_class"> This is paragraph 2</p>
+    <p id="paragraph_03" class = "paragraph_class"> This is paragraph 3</p>
+    
+    
+    </body>
+
+
+</html>

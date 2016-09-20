@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+            //when the webpage loads it hides the paragraph
+            $("#output").hide();
+            
+           //Register event listeners
+            $("#button_01").click(function(){
+                $("#output").show(3000 , function (){
+                alert("The show effect has completed");                  
+             });
+                
+            });
+        
+            $("#button_02").click(function (){
+             $("#output").hide(3000 , function (){
+                 alert("The hide effect has completed");
+             });    
+            });
+            
+            $("#button_03").click(function (){
+                $("#output").toggle(3000 , function (){
+                    alert("The toggle effect has completed");
+                });
+            });
+            
+          
+        });
+    </script>
+    </head>
+    
+    <body>
+    
+    <input type="button" id="button_01" value="Show"/>
+        <input type="button" id="button_02" value="Hide" />
+        <input type="button" id="button_03" value="Toggle"/>
+        
+        <p id="output">this is the paragraph</p>
+    
+    </body>
+</html>

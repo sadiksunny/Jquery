@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+           //hides the paragraph
+            $("#output").hide(6000 , function(){
+                confirm("the hide effect has finished");
+            }) ;
+            
+          $("#button").click(function (){
+              $("#output").toggle(1000 , function (){
+                 confirm("the toggle effect has finished"); 
+              });
+          }); //ENd of function
+        });// end of ready function
+    </script>
+    </head>
+    
+    <body>
+    <input type="button" id="button" value="Toggle">
+        <p id="output"> This content is disappearing</p>
+    
+    
+    </body>
+</html>

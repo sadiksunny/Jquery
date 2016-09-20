@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    
+    <style >
+    
+        p {
+            background-color: blue ; 
+            color:white ;
+            font-size: 20pt ; 
+            padding:10px;
+        }
+    
+    </style>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+            
+           //Gets the  css property value of   background-color
+            $("#p1").click(function (){
+                $("#p1").html($("#p1").css("background-color"));
+            });
+            
+            //Sets the css property od background-color to green //
+              $("#p2").click(function (){
+                $("#p2").css("background-color" , "green");
+            });
+            
+            //Sets multiple css properties 
+             $("#p3").click(function (){
+                $("#p3").css({"background-color":"red" , "font-size": "30pt"  , "color":"yellow"} );
+            });
+            
+            //Gets the Css property values
+             $("#p4").click(function (){
+               var background_color = $("#p4").css("background-color");
+                 var color = $("#p4").css("color");
+                 var font_size = $("#p4").css("font-size");
+                 var padding = $("#p4").css("padding");
+                 var the_output = "CSS properties : " + "<p>" + "background-color = "+ background_color + "<br>";
+                 the_output += "color = "+ color + "<br>";
+                 the_output += "font-size = "+ font_size + "<br>";
+                 $("#p4").html(the_output);
+                 
+            });
+            $("#p5").click(function (){
+                $("p").css("background-color" , 'pink');
+            });
+        });
+    </script>
+    </head>
+    
+    <body>
+    
+    <p id="p1"> Paragraph 1 </p>
+          <p id="p2"> Paragraph 2 </p>
+          <p id="p3"> Paragraph 3 </p>
+          <p id="p4"> Paragraph 4 </p>
+         <p id="p5"> Paragraph 5</p>
+    
+    </body>
+</html>

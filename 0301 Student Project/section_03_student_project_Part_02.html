@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	
+	<!-- Initialize Javascripts after the page loads. -->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	
+	
+		// Loads the jQuery Library //
+		$(document).ready(function() 
+		{
+			// Step 1: Modify the code.
+			$("#btn_01").click(function()
+			{
+				// Write a jquery statement that
+				// sets the color property to red
+				// on paragraph 1.
+			});
+			
+			
+			// Step 2: Modify the code.
+			$("#btn_02").click(function()
+			{
+				// Write a jquery statement that
+				// returns the color property of
+				// paragraph 1.
+			});
+			
+			
+			// Step 3: Modify the code.
+			$("#btn_03").click(function()
+			{
+				// Write a jquery statement that
+				// sets multiple css properties
+				// on paragraph 3.
+				// Use html tag: color: blue, font-size: 16pt, font-style: italic
+				// "css_property_name":"css_property_value", "css_property_name":"css_property_value"
+			});
+			
+			
+		}); // End of ready function.
+		
+	
+	</script>
+</head>
+<body>
+
+	<!-- Header -->
+	<h1>jQuery CSS</h1>
+	
+	<!-- Buttons -->
+	<button id="btn_01">SET CSS PROPERTY</button>
+	<button id="btn_02">GET CSS PROPERTY</button>
+	<button id="btn_03">SET MULTIPLE CSS PROPERTIES</button>
+	
+	
+	<!-- Paragraphs -->
+	<p id="paragraph_01">This is the contents of paragraph 1.</p>
+	<p id="paragraph_02">This is the contents of paragraph 2.</p>
+	<p id="paragraph_03">This is the contents of paragraph 3.</p>
+	
+	
+</body>
+</html>

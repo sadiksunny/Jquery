@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+    
+    <style>
+    #btn_get_data 
+        {
+            width: 250 px ;
+            height:100px;
+        }
+    
+    </style>
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+          
+            //setInterval("get_live_feed()" , 1000);
+            
+            $("#btn_get_data").click (function (){
+               
+                //Retrieves the content from data.html from an element with the my_p1.
+             //  $("#p1").load("data.html  #my_p1");
+                
+                
+                $.ajax (
+                 {
+                 type : "GET" , // the type of request to send to the server.
+                 dataType:"json" , //Return the data from the server as JSON . 
+                 url:"data.json" , //The url to send the request to the server . 
+                 success : function(response)
+                 {
+                 
+                 var names = "";
+                 for (var i = 0 ; i < response.Person.length; i++)
+                 {
+                 names =+ response.Person[i].firstName + " " + response.Person[i].lastName + "<br>" ; 
+                 } // End of for loop
+                 
+                 $("#p1").html(names);
+                 } // End of success function 
+                 } ); //End of ajax function
+                
+            });//End of button click
+        });//End of ready function
+        
+        function get_live_feed(){
+             
+                
+                $.ajax (
+                 {
+                 type : "GET" , // the type of request to send to the server.
+                 dataType:'json'  , //Return the data from the server as JSON . 
+                 url:"data.json" , //The url to send the request to the server . 
+                 success : function (response)
+                 {
+                 
+                 var names = "";
+                 for (var i = 0 ; i < response.Person.length; i++)
+                 {
+                 names =+ response.Person[i].firstName + " " + response.Person[i].lastName + "<br>" ; 
+                 } // End of for loop
+                 
+                 $("#p1").html(names);
+                 } // End of success function 
+                 }
+                   ); //End of ajax function
+        } // End of live feed
+    </script>
+    </head>
+    
+    <body>
+     
+    <input type="button" id="btn_get_data" value="Push Me"/>
+    <p id="p1"></p>
+    </body>
+</html>

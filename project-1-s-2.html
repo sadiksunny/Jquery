@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+           $('#paragraph_01').click(function(){
+               $('#paragraph_02').html("jQuery is ready , because u clicked!!!");
+           });
+            
+//            $('#paragraph_01').dblclick(function(){
+//               $('#paragraph_02').html("Thanks for doubleclicking!!!");
+//           });
+//             
+//            $('#paragraph_01').mouseenter(function(){
+//  $('#paragraph_02').html("Thanks for hovering!!!");
+//           });
+//             $('#paragraph_01').mouseleave(function(){
+//                 $('#paragraph_02').html("Thanks for leaving!!!");
+//           });
+        });
+    </script>
+    </head>
+    
+    <body>
+    <p id="paragraph_01"> This is  a  paragraph!!!!!!!!!</p>
+    <p id="paragraph_02"> This is  another paragraph</p>
+    
+    </body>
+</html>

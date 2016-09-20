@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	
+	<!-- Initialize Javascripts after the page loads. -->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	
+	
+		// Loads the jQuery Library //
+		$(document).ready(function() 
+		{
+			// Step 1: Modify the code.
+			$("#btn_01").click(function()
+			{
+				// Write a jquery statement that
+				// uses the jquery ajax method
+				// and get the html contents from
+				// the html file "data.html".
+				
+				$.ajax(
+				{
+				  type: "GET", // The type of request to send to the server.
+				  dataType: "html", // Return the data from the server as JSON.
+				  url: "data.html", // The url to send the request to the server.
+				  success: function(response)
+				  {
+					// Write the jquery statement here to get the html
+					// contents from the local server.
+				  } // End of success function
+				}); // End of ajax function
+			});
+			
+		}); // End of ready function.
+		
+	
+	</script>
+</head>
+<body>
+	
+	<!-- Buttons -->
+	<button id="btn_01">Get Content From Server</button>
+	
+	
+	<!-- Paragraphs -->
+	<p id="output">Content from the server displayed below:</p>
+	
+</body>
+</html>

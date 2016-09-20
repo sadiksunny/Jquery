@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+             $("#button_04").click(function (){
+                $("#output").fadeToggle(2000 , function(){
+                    alert("Fade Toggle completed!!!!");
+                });
+            });
+            
+            $("#button_05").click(function (){
+                $("#output").fadeIn(2000 , function (){
+                alert("Fade Toggle in done!!!!");     
+                });
+            });
+            
+            $("#button_06").click(function (){
+                $("#output").fadeOut(2000 , function (){
+                    alert("Fade toggle out completed!!");
+                });
+            });
+            
+            $("#button_07").click(function (){
+                $("#output").slideToggle(2000 , function (){
+                alert("slide toggle done!!!");     
+                });
+            });
+             $("#button_08").click(function (){
+                $("#output").slideUp(2000 , function (){
+                alert("slide up done!!!");     
+                });
+            });
+             $("#button_09").click(function (){
+                $("#output").slideDown(2000 , function (){
+                alert("slide down done!!!");     
+                });
+            });
+        });
+    </script>
+    </head>
+    
+    <body>
+        
+    
+    <input type="button" id="button_04" value="fadeToggle"/>
+        <input type="button" id="button_05" value="fadeIn"/>
+        <input type="button" id="button_06" value="fadeOut"/>
+        <input type="button" id="button_07" value="slideToggle"/>
+        <input type="button" id="button_08" value="slideUp"/>
+        <input type="button" id="button_09" value="slideDown"/>
+        
+        <p id="output"> This is the content for fade and slide effects</p>
+    
+    </body>
+</html>

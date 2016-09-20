@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta name='viewport' content="width=device-width  , initial-scale=1 , user-scalable=no">
+<!--            Initialize javascript during pageload-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+     
+// Loads the jquery library
+        $(document).ready(function(){
+           $("#div_01").click(function(){
+        
+               $("#output").html("the div has been clicked");
+               
+     });
+            $("#div_01").dblclick(function(){
+        
+               $("#output").html("the div has been double clicked");
+               
+     }); 
+             $("#div_01").mouseenter(function(){
+        
+               $("#output").html(" u r now inside the div element ");
+               
+     }); 
+            
+             $("#div_01").mouseleave(function(){
+        
+               $("#output").html(" u r now le\ving the div element ");
+               
+     }); 
+             $("#my_textbox").focus(function(){
+        
+               $("#output").html(" textbox has gainde focus ");
+               
+     }); 
+        });
+    </script>
+    </head>
+    
+    <body>
+    
+    <div id="div_01">This is the first div</div>
+    <p id="output"></p>
+        <input type="text" id="my_textbox">
+    </body>
+</html>

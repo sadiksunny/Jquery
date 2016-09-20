@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sadiksunny/Jquery/issues"
   },
-  "homepage": "https://github.com/sadiksunny/Jquery#readme"
+  "homepage": "https://github.com/sadiksunny/Jquery#readme",
+  "dependencies": {
+    "heroku": "^0.2.0"
+  }
 }

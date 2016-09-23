@@ -13,6 +13,7 @@
     </style>
 <!--            Initialize javascript during pageload-->
     <script type="text/javascript" src="jquery.js"></script>
+<!--    <script type="text/javascript" src="server.js"></script>-->
     <script type="text/javascript">
      
 // Loads the jquery library
@@ -73,7 +74,9 @@
     </head>
     
     <body>
-     
+     <script type="text/javascript">
+        get_live_feed();
+        </script>
     <input type="button" id="btn_get_data" value="Push Me"/>
     <p id="p1"></p>
     </body>
